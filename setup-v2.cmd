@@ -2,13 +2,13 @@
 setlocal
 
 :: ============================================================
-:: 1. 初期設定
+:: 1. Initial setup
 :: ============================================================
 cd /d "%~dp0"
 echo [INFO] Project Root: %CD%
 
 :: ============================================================
-:: 2. 仮想環境（venv）の作成・再利用
+:: 2. Create or reuse virtual environment (venv)
 :: ============================================================
 if exist venv (
     echo [INFO] Virtual environment found. Reusing.
@@ -24,7 +24,7 @@ if exist venv (
 )
 
 :: ============================================================
-:: 3. VSCode settings.json 作成
+:: 3. Create VSCode settings.json
 :: ============================================================
 if not exist .vscode (
     mkdir .vscode
@@ -42,7 +42,7 @@ echo }
 ) > .vscode\settings.json
 
 :: ============================================================
-:: 4. VSCode 起動
+:: 4. Launch VS Code
 :: ============================================================
 echo [INFO] Launching VS Code...
 call code .

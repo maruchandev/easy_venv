@@ -10,11 +10,7 @@ if not exist venv (
     echo Virtual environment already exists.
 )
 
-:: 2. Activate the virtual environment
-call venv\Scripts\activate
-echo Virtual environment activated.
-
-:: 3. Display instructions for running the Python file
+:: 2. Display instructions for running the Python file
 echo =====================================
 echo To run your Python script, use the following command:
 echo =====================================
@@ -27,7 +23,7 @@ echo    python {script_name}.py
 echo =====================================
 echo.
 
-:: 4. Provide options to the user
+:: 3. Provide options to the user
 echo Please choose an option:
 echo 1. Exit
 echo 2. Open VSCode in the current directory with the virtual environment activated
